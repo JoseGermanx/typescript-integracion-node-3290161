@@ -1,5 +1,6 @@
-# Nombre final del curso
-Este es el repositorio del curso de LinkedIn Learning `nombre del curso`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
+# Domina TypeScript: Integración con Node
+
+Este es el repositorio del curso de LinkedIn Learning `Domina TypeScript: Integración con Node`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
 ![Nombre completo del curso][lil-thumbnail-url] 
 
@@ -22,9 +23,9 @@ Las ramas están estructuradas para corresponder a los vídeos del curso. La con
 
 ### Docente
 
-**Nombre del docente**
+**Natalia Corea**
 
-Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
+Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/natalia-corea).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
