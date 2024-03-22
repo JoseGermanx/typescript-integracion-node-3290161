@@ -1,22 +1,15 @@
-import { ListaUsuarios, Pelicula, Usuario } from "../tipos/tipos";
-
+/*
 export const EJEMPLO_USUARIO: Usuario = {
   id: 1,
   nombre: "Ejemplo Usuario",
   email: "usuario@ejemplo.com",
   edad: 30,
-  informacionContacto: {
-    casa: "123 Main St",
-    ciudad: "Ciudad Ejemplo",
-    codigoPostal: "12345",
-    telefono: "555-1234"
-  },
-  perfil: {
-    bio: "Soy un ejemplo de usuario",
-    intereses: ["Programación", "Viajes"],
-    sitioWeb: "https://www.ejemplo.com"
-  }
+  telefono: "555-1234",
+  casa: "123 Main St",
+  ciudad: "Ciudad Ejemplo",
+  codigoPostal: "12345",
 };
+
 
 export const USUARIOS: ListaUsuarios = {
   usuarios: [
@@ -183,36 +176,4 @@ export const USUARIOS: ListaUsuarios = {
     },
   ]
 };
-
-export const PELICULAS: Pelicula[] = [
-  {
-    id: 1,
-    titulo: "Titanic",
-    genero: "Romance",
-    duracion: "3 horas",
-  },
-  {
-    id: 2,
-    titulo: "El Padrino",
-    genero: "Drama",
-    duracion: "2 horas y 55 minutos",
-  },
-  {
-    id: 3,
-    titulo: "Inception",
-    genero: "Ciencia ficción",
-    duracion: "2 horas y 28 minutos",
-  },
-  {
-    id: 4,
-    titulo: "Forrest Gump",
-    genero: "Drama",
-    duracion: "2 horas y 22 minutos",
-  },
-  {
-    id: 5,
-    titulo: "The Shawshank Redemption",
-    genero: "Drama",
-    duracion: "2 horas y 22 minutos",
-  },
-];
+*/
