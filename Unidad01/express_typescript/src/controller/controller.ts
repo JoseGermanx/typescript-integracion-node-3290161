@@ -4,7 +4,6 @@ import { buscarUsuario, cargarTodoslosUsuarios, guardarUsuario, actualizarUsuari
 
 
 const obtenerUsuarios = async (req: Request, res: Response, next: NextFunction) => {
-    const titulo = req.params.titulo;
     cargarTodoslosUsuarios().then((resultados) => {
         return res.status(200).json({
             usuarios: resultados
