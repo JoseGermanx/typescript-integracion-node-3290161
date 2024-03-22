@@ -1,0 +1,11 @@
+type Query {
+  hello: String
+}
+
+type Mutation {
+  greet(name: String!): String
+}
+
+type Subscription {
+  newMessage: String
+}
