@@ -1,6 +1,5 @@
 import * as fs from 'fs';
 import { BuscarUsuarioInput, Usuario } from '../tipos';
-import { v4 as uuidv4 } from 'uuid';
 import csvWriteStream from 'csv-write-stream';
 import csvParser from 'csv-parser';
 
