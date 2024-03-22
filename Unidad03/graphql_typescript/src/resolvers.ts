@@ -4,8 +4,8 @@ import { Usuario, AgregarUsuarioInput, BuscarUsuarioInput } from './tipos';
 
 const resolvers = {
   Query: {
-    obtenerUsuario: async (parent: any, input: BuscarUsuarioInput) => {
-        const resultados = await buscarUsuario(input);
+    obtenerUsuario: async (parent: any, { id }: { id: BuscarUsuarioInput }) => {
+        const resultados = await buscarUsuario(id);
         return resultados[0];
     },
     obtenerUsuarios: async () => {
@@ -19,7 +19,7 @@ const resolvers = {
       await guardarUsuario(usuario)
       return usuario;
     },
-    modifcarUsuario: async (parent: unknown, { input }: { input: Usuario }) => {
+    modificarUsuario: async (parent: unknown, { input }: { input: Usuario }) => {
         const resultados = await actualizarUsuarioCsv(input);
         return resultados;
     },

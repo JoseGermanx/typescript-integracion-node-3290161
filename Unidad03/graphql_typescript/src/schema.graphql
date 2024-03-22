@@ -5,7 +5,7 @@ type Query {
 
 type Mutation {
   agregarUsuario(input: AgregarUsuarioInput!): Usuario!
-  modifcarUsuario(input: ModificarUsuarioInput!): Int!
+  modificarUsuario(input: ModificarUsuarioInput!): Int!
   borrarUsuario(id: BuscarUsuarioInput!): Int!
 }
 
