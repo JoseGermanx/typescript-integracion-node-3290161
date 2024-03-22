@@ -22,7 +22,7 @@ El proyecto de la Unidad02 requiere que instales un servidor MySQL en tu computa
 
 1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
    - [Node.js](https://nodejs.org/en/)
-   - [MySQL]([https://nodejs.org/en/](https://dev.mysql.com/downloads/mysql/))
+   - [MySQL](https://nodejs.org/en/](https://dev.mysql.com/downloads/mysql/)
    - Un editor de código ([VS Code](https://code.visualstudio.com/) es recomendado)
    - [Postman](https://www.postman.com/) u alguna otra herramienta que te permita enviar peticiones a tu servidor
 
