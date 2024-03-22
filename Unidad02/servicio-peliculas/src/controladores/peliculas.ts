@@ -4,7 +4,7 @@ import PeliculaDBRepositorio from '../db/repositorio/pelicula.repository';
 import { Pelicula, esPelicula } from '../comun/tipos';
 
 const obtenerPeliculas = async (req: Request, res: Response, next: NextFunction) => {
-    const titulo = req.params.titulo;
+    const titulo = typeof req.query.titulo === 'string' ? req.query.titulo : undefined;
     PeliculaDBRepositorio.obtenerTodas({titulo}).then((peliculas: PeliculaDB[]) => {
         return res.status(200).json({
             message: peliculas
@@ -34,6 +34,11 @@ const actualizarPelicula = async (req: Request, res: Response, next: NextFunctio
         poster: req.body.poster,
         clasificacion: req.body.clasificacion,
     };
+    if(!esPelicula(params)){
+        return res.status(400).json({
+            mensaje: `Datos no tienen la estructura correcta`
+        });
+    }
     PeliculaDBRepositorio.actualizar(params).then((filasAfectadas: number) => {
         return res.status(200).json({
             filasAfectadas
@@ -43,9 +48,9 @@ const actualizarPelicula = async (req: Request, res: Response, next: NextFunctio
 
 const borrarPelicula = async (req: Request, res: Response, next: NextFunction) => {
     const id = parseInt(req.params.id);
-    PeliculaDBRepositorio.borrar(id).then(() => {
+    PeliculaDBRepositorio.borrar(id).then((filasAfectadas) => {
         return res.status(200).json({
-            message: 'la película se ha borrado'
+            message: 'número de peliculas borradas: ' + filasAfectadas
         });
     });
 };
@@ -62,7 +67,11 @@ const agregarPelicula = async (req: Request, res: Response, next: NextFunction) 
         poster: req.body.poster,
         clasificacion: req.body.clasificacion,
     };
-    
+    if(!esPelicula(params)){
+        return res.status(400).json({
+            mensaje: `Datos no tienen la estructura correcta`
+        });
+    }
     PeliculaDBRepositorio.guardar(params).then((pelicula) => {
         return res.status(200).json({
             pelicula

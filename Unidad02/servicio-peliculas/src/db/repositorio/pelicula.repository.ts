@@ -1,4 +1,4 @@
-import { OkPacket } from "mysql2";
+import { ResultSetHeader } from "mysql2";
 import connection from "../index";
 import PeliculaDB from "../models/pelicula.model";
 import { Pelicula } from "../../comun/tipos";
@@ -15,8 +15,8 @@ interface IPeliculaDBRepositorio {
 class PeliculaDBRepositorio implements IPeliculaDBRepositorio {
     guardar(pelicula: Omit<Pelicula, 'id'>): Promise<PeliculaDB> {
         return new Promise((resolve, reject) => {
-            connection.query<OkPacket>(
-              "INSERT INTO Pelicula (titulo, descripcion, idioma, trama, pais, generos, anio_estreno, poster, clasificacion) VALUES(?,?,?,?,?,?,?)",
+            connection.query<ResultSetHeader>(
+              "INSERT INTO Pelicula (titulo, descripcion, idioma, trama, pais, generos, anio_estreno, poster, clasificacion) VALUES(?,?,?,?,?,?,?,?,?)",
               [pelicula.titulo, pelicula.descripcion, pelicula.idioma, pelicula.trama, pelicula.pais, pelicula.generos, pelicula.anio_estreno, pelicula.poster, pelicula.clasificacion],
               (err, res) => {
                 if (err) reject(err);
@@ -60,9 +60,9 @@ obtenerPorId(peliculaId: number): Promise<PeliculaDB> {
 }
 actualizar(pelicula: Pelicula): Promise<number> {
     return new Promise((resolve, reject) => {
-        connection.query<OkPacket>(
-          "UPDATE Pelicula SET titulo = ?, descripcion = ?, idioma = ?, trama = ?, pais = ?, generos = ?, anio_estreno = ?, poster = ?, clasificacion = ? WHERE idPelicula = ?",
-          [pelicula.titulo, pelicula.descripcion, pelicula.idioma, pelicula.trama, pelicula.pais, pelicula.generos, pelicula.anio_estreno, pelicula.poster, pelicula.clasificacion],
+        connection.query<ResultSetHeader>(
+          "UPDATE Pelicula SET titulo = ?, descripcion = ?, idioma = ?, trama = ?, pais = ?, generos = ?, anio_estreno = ?, poster = ?, clasificacion = ? WHERE id = ?",
+          [pelicula.titulo, pelicula.descripcion, pelicula.idioma, pelicula.trama, pelicula.pais, pelicula.generos, pelicula.anio_estreno, pelicula.poster, pelicula.clasificacion, pelicula.id],
           (err, res) => {
             if (err) reject(err);
             else resolve(res.affectedRows);
@@ -72,8 +72,8 @@ actualizar(pelicula: Pelicula): Promise<number> {
 }
 borrar(peliculaId: number): Promise<number> {
     return new Promise((resolve, reject) => {
-        connection.query<OkPacket>(
-          "DELETE FROM Pelicula WHERE idPelicula = ?",
+        connection.query<ResultSetHeader>(
+          "DELETE FROM Pelicula WHERE id = ?",
           [peliculaId],
           (err, res) => {
             if (err) reject(err);
@@ -84,7 +84,7 @@ borrar(peliculaId: number): Promise<number> {
 }
 borrarTodas(): Promise<number> {
     return new Promise((resolve, reject) => {
-        connection.query<OkPacket>("DELETE FROM Pelicula", (err, res) => {
+        connection.query<ResultSetHeader>("DELETE FROM Pelicula", (err, res) => {
           if (err) reject(err);
           else resolve(res.affectedRows);
         });

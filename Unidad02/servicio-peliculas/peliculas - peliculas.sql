@@ -1,6 +1,7 @@
 DROP TABLE IF EXISTS pelicula;
 CREATE TABLE IF NOT EXISTS pelicula(
-   titulo        VARCHAR(49) NOT NULL PRIMARY KEY
+	id INT auto_increment PRIMARY KEY,
+   titulo        VARCHAR(49) NOT NULL
   ,descripcion   VARCHAR(172) NOT NULL
   ,anio_estreno  INTEGER  NOT NULL
   ,idioma        VARCHAR(23) NOT NULL
