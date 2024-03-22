@@ -9,17 +9,24 @@ Consulta el archivo Readme en la rama main para obtener instrucciones e informac
 DESCRIPCIÓN DEL CURSO
 
 ## Instrucciones
-Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. Puedes usar el menú emergente de la rama en GitHub para cambiar a una rama específica y echar un vistazo al curso en esa etapa, o puedes añadir `/tree/nombre_de_la_rama` a la URL para ir a la rama a la que quieres acceder.
 
-## Ramas
-Las ramas están estructuradas para corresponder a los vídeos del curso. La convención de nomenclatura es Capítulo#_Vídeo#. Por ejemplo, la rama denominada `02_03` corresponde al segundo capítulo y al tercer vídeo de ese capítulo. Algunas ramas tendrán un estado inicial y otro final. Están marcadas con las letras i («inicio») y f («fin»). La branch i tiene el mismo código que al principio del vídeo. La branch f tiene el mismo código que al final del vídeo. La rama master tiene el estado final del código que aparece en el curso.
+Este repositorio no tiene ramas por lo que al descargar el repositorio completo obtendrás los archivos en su versión final.
+
+Cada proyecto que se ve en este curso esta almcenado en su carpeta correspondiente según el número de unidad.
+
+Para correr cada proyecto, debes correr el comando `npm install` y luego `npm start` o `npm run dev` para inicializar el servidor local.
+
+El proyecto de la Unidad02 requiere que instales un servidor MySQL en tu computadora. Deberás crear una base de datos llamada `Peliculas` y ejecutar el script `.sql` que se incluye en el proyecto. También debes incresar la información de tu servidor en el archivo `src/config/db.config.ts` para que el servidor pueda conectarse a tu base de datos.
 
 ## Instalación
+
 1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
-	- [software]
-	
+   - [Node.js](https://nodejs.org/en/)
+   - [MySQL]([https://nodejs.org/en/](https://dev.mysql.com/downloads/mysql/))
+   - Un editor de código ([VS Code](https://code.visualstudio.com/) es recomendado)
+   - [Postman](https://www.postman.com/) u alguna otra herramienta que te permita enviar peticiones a tu servidor
+
 2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
-3. [Instrucciones específicas del curso].
 
 ### Docente
 
