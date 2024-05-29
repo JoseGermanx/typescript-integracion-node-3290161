@@ -35,8 +35,8 @@ El proyecto de la Unidad02 requiere que instales un servidor MySQL en tu computa
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/natalia-corea).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
-[lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
+[lil-course-url]: [https://www.linkedin.com/learning/building-a-graphql-project-with-react-js](https://www.linkedin.com/learning/domina-typescript-integracion-con-node/)
+[lil-thumbnail-url]: [https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg](https://media.licdn.com/dms/image/D4E0DAQFL0cnr4_orTg/learning-public-crop_675_1200/0/1716542652436?e=2147483647&v=beta&t=ofHhODIM0YAGI4LKaWZRYV2qJIMRA8tuIYZ0DIstXOY)
 
 
 [1]: # (End of ES-Instruction ###############################################################################################)
