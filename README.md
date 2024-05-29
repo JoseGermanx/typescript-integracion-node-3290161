@@ -36,7 +36,7 @@ Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.c
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 [lil-course-url]: [https://www.linkedin.com/learning/building-a-graphql-project-with-react-js](https://www.linkedin.com/learning/domina-typescript-integracion-con-node/)
-[lil-thumbnail-url]: [https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg](https://media.licdn.com/dms/image/D4E0DAQFL0cnr4_orTg/learning-public-crop_675_1200/0/1716542652436?e=2147483647&v=beta&t=ofHhODIM0YAGI4LKaWZRYV2qJIMRA8tuIYZ0DIstXOY)
+[lil-thumbnail-url]: [[https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg](https://media.licdn.com/dms/image/D4E0DAQFL0cnr4_orTg/learning-public-crop_675_1200/0/1716542652436?e=2147483647&v=beta&t=ofHhODIM0YAGI4LKaWZRYV2qJIMRA8tuIYZ0DIstXOY)](https://media.licdn.com/dms/image/D4E0DAQFL0cnr4_orTg/learning-public-crop_675_1200/0/1716542652436?e=1717596000&v=beta&t=4KVPzdQbv1eQPuZWyUK7Zz1TLQ5UmoYYXk1OjGUDJg8)
 
 
 [1]: # (End of ES-Instruction ###############################################################################################)
