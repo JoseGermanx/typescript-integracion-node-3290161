@@ -16,7 +16,7 @@ class PeliculaDBRepositorio implements IPeliculaDBRepositorio {
     guardar(pelicula: Omit<Pelicula, 'id'>): Promise<PeliculaDB> {
         return new Promise((resolve, reject) => {
             connection.query<ResultSetHeader>(
-              "INSERT INTO Pelicula (titulo, descripcion, idioma, trama, pais, generos, anio_estreno, poster, clasificacion) VALUES(?,?,?,?,?,?,?,?,?)",
+              "INSERT INTO pelicula (titulo, descripcion, idioma, trama, pais, generos, anio_estreno, poster, clasificacion) VALUES(?,?,?,?,?,?,?,?,?)",
               [pelicula.titulo, pelicula.descripcion, pelicula.idioma, pelicula.trama, pelicula.pais, pelicula.generos, pelicula.anio_estreno, pelicula.poster, pelicula.clasificacion],
               (err, res) => {
                 if (err) reject(err);
@@ -30,7 +30,7 @@ class PeliculaDBRepositorio implements IPeliculaDBRepositorio {
     }
 
 obtenerTodas(parametrosBusqueda: {titulo?: string}): Promise<PeliculaDB[]> {
-    let query: string = "SELECT * FROM Pelicula";
+    let query: string = "SELECT * FROM pelicula";
     let condicion: string = "";
 
   if (parametrosBusqueda?.titulo)
@@ -49,7 +49,7 @@ obtenerTodas(parametrosBusqueda: {titulo?: string}): Promise<PeliculaDB[]> {
 obtenerPorId(peliculaId: number): Promise<PeliculaDB> {
     return new Promise((resolve, reject) => {
         connection.query<PeliculaDB[]>(
-          "SELECT * FROM Pelicula WHERE id = ?",
+          "SELECT * FROM pelicula WHERE id = ?",
           [peliculaId],
           (err, res) => {
             if (err) reject(err);
@@ -61,7 +61,7 @@ obtenerPorId(peliculaId: number): Promise<PeliculaDB> {
 actualizar(pelicula: Pelicula): Promise<number> {
     return new Promise((resolve, reject) => {
         connection.query<ResultSetHeader>(
-          "UPDATE Pelicula SET titulo = ?, descripcion = ?, idioma = ?, trama = ?, pais = ?, generos = ?, anio_estreno = ?, poster = ?, clasificacion = ? WHERE id = ?",
+          "UPDATE pelicula SET titulo = ?, descripcion = ?, idioma = ?, trama = ?, pais = ?, generos = ?, anio_estreno = ?, poster = ?, clasificacion = ? WHERE id = ?",
           [pelicula.titulo, pelicula.descripcion, pelicula.idioma, pelicula.trama, pelicula.pais, pelicula.generos, pelicula.anio_estreno, pelicula.poster, pelicula.clasificacion, pelicula.id],
           (err, res) => {
             if (err) reject(err);
@@ -73,7 +73,7 @@ actualizar(pelicula: Pelicula): Promise<number> {
 borrar(peliculaId: number): Promise<number> {
     return new Promise((resolve, reject) => {
         connection.query<ResultSetHeader>(
-          "DELETE FROM Pelicula WHERE id = ?",
+          "DELETE FROM pelicula WHERE id = ?",
           [peliculaId],
           (err, res) => {
             if (err) reject(err);

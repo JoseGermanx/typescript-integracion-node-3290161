@@ -1,0 +1,13 @@
+services:
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_USER: jgxdev
+      MYSQL_PASSWORD: 123456
+    volumes:
+      - ./mysql:/data/db
+    ports:
+      - "4100:3306"
